@@ -6,7 +6,11 @@
 2. Create `.env` file.
 
 ```
-LAMBDA_FUNCTION_NAME=function-name
+S3_BUCKET_NAME=
+LAMBDA_FUNCTION_NAME=
+PROFILE=
+REGION=
+COMMANDS_PATH=
 ```
 
 3. Write required library to `requirements.txt`

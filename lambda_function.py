@@ -13,5 +13,7 @@ def lambda_handler(event, context):
     commands = event
     for path in commands_path:
         commands = commands[path]
-    subprocess.run("python -m awscli " + commands, shell=True)
+    response = subprocess.run("python -m awscli " + commands, shell=True, stdout=subprocess.PIPE , stderr=subprocess.PIPE ,encoding="utf-8")
+    print(response.stdout)
+    print(response.stderr)
     return event
